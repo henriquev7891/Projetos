@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eletro Store</title>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/global.css" rel="stylesheet">
+    <script src="./js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <div>
+        <img src="img/banner3.png">
+    </div>
+</header>
+<div>
+    <div>
+    <div class="d-flex flex-column flex-md-row align-items-center p-4 px-md-4 mb-3 bg-dark text-white shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Eletro Store</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-white nav-item" style="text-decoration: none;" href="index.html">Ofertas</a>
+            <a class="p-2 text-white nav-item" style="text-decoration: none;" href="contato.html">Contato</a>
+            <a class="p-3 text-white nav-item" style="text-decoration: none;" href="sobre.html">Sobre</a>
+            <button type="button" class="btn btn-success btn-lg fas fa-shopping-cart" data-toggle="modal" data-target="#modalExemplo"></button>
+        </nav>
+        <a class="btn btn-primary" href="#">Cadastrar-se</a>
+    </div>
+        <!-- Modal -->
+        <div class="modal fade" style="color: red" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Ops. É necessário adicionar um item ao carrinho primeiro ou clicar em comprar abaixo do item.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Final Modal -->
+    </div>
+        <br>
+    <div class="text-center">
+        <h1>Fale Conosco</h1>
+    </div>
+    <br>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card" style="border: none;">
+            <div class="card-body">
+                <div class="container-sm" style="margin-left: 30px;">
+                    <div>
+                        <form>
+                            <div class="contato1">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Endereço de Email:</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="seuemail@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Seu Nome:</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome Completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Número do Pedido:</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Digite o número do pedido">
+                                </div>
+                            </div><br>
+                            <div class="form-group">
+                                <textarea class="form-control" style="width: 430px; height: 200px;" id="exampleFormControlTextarea1" rows="3" placeholder="Qual o assunto? Responderemos assim que possível."></textarea>
+                            </div>
+                            <a class="btn btn-primary" href="#" role="button">Enviar</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card" style="border: none; width: 560px;">
+            <div class="card-body">
+                <h5 class="card-title text-center">Central de Atendimento Eletro Store 24/7</h5>
+                <iframe src='https://webchat.botframework.com/embed/EletroStore?s=ceXcQ1ASI-A.j93m3pYZQPStlvfpb00R4_20GW8N1lZXqX3E2nd4hMM'  style=' margin-left: 10px; min-width: 400px; width: 500px; min-height: 400px; border-color: gray;'></iframe>
+            </div>
+        </div><br>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+        <small>Copyright &copy; Eletro Store</small>
+        <div class="float-right">
+        <p class="fab fa-twitter-square" style="font-size: 25px; color: cornflowerblue;"></p>
+        <p class="fab fa-facebook-square" style="font-size: 25px; color: cornflowerblue; margin-left: 15px;"></p>
+        </div>
+    </div>
+</footer>
+</html>

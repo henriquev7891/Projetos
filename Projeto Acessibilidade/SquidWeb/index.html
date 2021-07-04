@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Web design acessível e professional ">
+	<meta name="keywords" content="web design,web design acessível,web design profissional">
+    <title>Squid Web | Bem vindo</title>
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/constrast.css">
+  </head>
+  <body>
+  <script type="text/javascript">
+            window.onload = function() {
+                var elementBody = document.querySelector('body');
+                var elementBtnIncreaseFont = document.getElementById('increase-font');
+                var elementBtnDecreaseFont = document.getElementById('decrease-font');
+                // Padrão de tamanho, equivale a 100% do valor definido no Body
+                var fontSize = 100;
+                // Valor de incremento ou decremento, equivale a 10% do valor do Body
+                var increaseDecrease = 10;
+
+                // Evento de click para aumentar a fonte
+                elementBtnIncreaseFont.addEventListener('click', function(event) {
+                    fontSize = fontSize + increaseDecrease;
+                    elementBody.style.fontSize = fontSize + '%';
+                });
+
+                // Evento de click para diminuir a fonte
+                elementBtnDecreaseFont.addEventListener('click', function(event) {
+                    fontSize = fontSize - increaseDecrease;
+                    elementBody.style.fontSize = fontSize + '%';
+                });
+            }
+    </script>
+	<script type="text/javascript">
+	(function () {
+    var Contrast = {
+        storage: 'contrastState',
+        cssClass: 'contrast',
+        currentState: null,
+        check: checkContrast,
+        getState: getContrastState,
+        setState: setContrastState,
+        toogle: toogleContrast,
+        updateView: updateViewContrast
+    };
+
+    window.toggleContrast = function () { Contrast.toogle(); };
+
+    Contrast.check();
+
+    function checkContrast() {
+        this.updateView();
+    }
+
+    function getContrastState() {
+        return localStorage.getItem(this.storage) === 'true';
+    }
+
+    function setContrastState(state) {
+        localStorage.setItem(this.storage, '' + state);
+        this.currentState = state;
+        this.updateView();
+    }
+
+    function updateViewContrast() {
+        var body = document.body;
+
+        if (this.currentState === null)
+            this.currentState = this.getState();
+
+        if (this.currentState)
+            body.classList.add(this.cssClass);
+        else
+            body.classList.remove(this.cssClass);
+    }
+
+    function toogleContrast() {
+        this.setState(!this.currentState);
+    }
+})();
+</script>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Squid</span> Web</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="orçamento.html">Orçamento</a></li>
+			<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="showcase">
+      <div class="container">
+        <h1>Construção de Sites Profissionais</h1>
+        <p>Desenvolvemos qualquer tipo de site para qualquer área. Saiba como ter um site exclusivo, bonito, responsivo e funcional.
+		   Faça já seu orçamento e comece a desenvolver seu website.
+		</p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Assine a nossa newsletter</h1>
+        <form>
+          <input type="email" placeholder="Digite o email...">
+          <button type="submit" class="button_1">
+            Inscreva-se</button>
+        </form>
+      </div>
+    </section>
+
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="./img/logo_html.png">
+          <h3>Marcação HTML5</h3>
+          <p>Nossos sites contam com HTML5 e todas suas novas funcionalidades da atualidade.</p>
+        </div>
+        <div class="box">
+          <img src="./img/logo_css.png">
+          <h3>CSS3 Styling</h3>
+          <p>Desenvolvemos nosso próprio estilo seguindo sempre o gosto de nossos clientes</p>
+        </div>
+        <div class="box">
+          <img src="./img/logo_brush.png">
+          <h3>Design Gráfico</h3>
+          <p>Contamos com temas pré montados disponíveis para que nossos clientes possam usar se preferir</p>
+        </div>
+      </div>
+    </section>
+    <div class="btn-container">
+            <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+            <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+    </div>
+    <footer>
+      <p>Squid Web -  Copyright &copy; 2019</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'crud/base.html' %}
+{% block body %}
+    <form method="POST" action="update/{{ members.id }}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="firstname">Nome</label>
+            <input type="text" name="firstname" value="{{ members.firstname }}" required="required"/>
+        </div>
+        <div class="form-group">
+            <label for="lastname">Sobrenome</label>
+            <input type="text" name="lastname" value="{{ members.lastname }}" required="required"/>
+        </div>
+		<div class="form-group">
+            <label for="setor">Setor</label>
+            <input type="text" name="setor" value="{{ members.setor }}" required="required"/>
+        </div>
+		<div class="form-group">
+            <label for="salario">Salário</label>
+            <input type="text" name="salario" value="{{ members.salario }}" required="required"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-warning"><span class="glyphicon glyphicon-edit"></span> Atualizar</button>
+        </div>
+    </form>
+{% endblock %}

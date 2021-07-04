@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+	<meta name="keywords" content="web design, affordable web design, professional web design">
+    <title>Squid Web | Sobre</title>
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/constrast.css">
+  </head>
+  <body>
+  <script type="text/javascript">
+	(function () {
+    var Contrast = {
+        storage: 'contrastState',
+        cssClass: 'contrast',
+        currentState: null,
+        check: checkContrast,
+        getState: getContrastState,
+        setState: setContrastState,
+        toogle: toogleContrast,
+        updateView: updateViewContrast
+    };
+
+    window.toggleContrast = function () { Contrast.toogle(); };
+
+    Contrast.check();
+
+    function checkContrast() {
+        this.updateView();
+    }
+
+    function getContrastState() {
+        return localStorage.getItem(this.storage) === 'true';
+    }
+
+    function setContrastState(state) {
+        localStorage.setItem(this.storage, '' + state);
+        this.currentState = state;
+        this.updateView();
+    }
+
+    function updateViewContrast() {
+        var body = document.body;
+
+        if (this.currentState === null)
+            this.currentState = this.getState();
+
+        if (this.currentState)
+            body.classList.add(this.cssClass);
+        else
+            body.classList.remove(this.cssClass);
+    }
+
+    function toogleContrast() {
+        this.setState(!this.currentState);
+    }
+})();
+	</script>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Squid</span> Web </h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="sobre.html">Sobre</a></li>
+            <li><a href="orçamento.html">Orçamento</a></li>
+			<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Assine a nossa newsletter</h1>
+        <form>
+          <input type="email" placeholder="Digite o Email...">
+          <button type="submit" class="button_1">Inscreva-se</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Sobre nós</h1>
+          <p>
+            A Squid Web é uma microempresa especializada na Criação de Sites modernos, pensando em simplicidade, facilidade e agilidade. Se destacando das outras empresas por oferecer a nossos clientes transparência nas etapas do Projeto e temas e códigos próprios.
+          </p>
+          <p class="dark">
+		    Em nossa empresa utilizamos HTML5 uma linguagem de marcação atual oferecendo novas funcionalidades aos sites, também utilizamos PHP e WordPress.
+			Sempre mantendo a melhor escolha para nossos clientes.
+			Além de oferecer temas pré montados caso nossos clientes queiram usar focando sempre na melhor opção e mantendo o compromisso de ajudar nossos clientes com seu négocio.
+          </p>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>O que nós fazemos</h3>
+            <p>Desenvolvemos sites profissionais utilizando WordPress, HTML5 e PHP para qualquer tipo de pessoa ou négocio disponibilizando manutenção e suporte técnico.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <p>Squid Web -  Copyright &copy; 2019</p>
+    </footer>
+  </body>
+</html>
